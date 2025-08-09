@@ -1,13 +1,22 @@
 body {
     background-color: rgb(255, 0, 0);
-    color: rgb(255, 0, 0);
-    font-size: 300%;
-    animation: syndrome 0.0693435s infinite;
+    color: rgb(228, 224, 224);
+    font-size: 50%;
     display: flex;
     justify-content: space-around;
+    border: 3px solid rgb(255, 0, 255);
 
 }
+* {
+    animation: pain 1s infinite alternate;
+    background-color: blue;
+    border: 3px solid rgb(255, 0, 255);
+}
+*:hover {
+    animation: spin 10s ease-in-out 0s infinite forwards;
+}
 a {
+    font-size: 300%;
     border: 2px solid red;
     color: yellow;
 }
@@ -32,13 +41,14 @@ p {
   top: 0;
   left: 0;
   right: 0;
+  background-color: rgba(0, 0, 0, 0);
   bottom: 0;
   z-index: 0;
   cursor: pointer;
   display: initial;
 }
 .overlay:hover {
-    transition: opacity 5.0s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     opacity: 0.0;
 
 }
@@ -53,6 +63,27 @@ p {
          filter:invert(100%) hue-rotate(180deg) saturate(200%);
 
     }
+}
+@keyframes pain {
+    0% {
+        filter:invert(100%);
+       
+    }
+    50% {
+        filter:invert(0%);
+        
+    }
+}
+@keyframes spin {
+    0% {
+         transform: rotate3d(1, 1, 1, 0deg);
+    }
+    50% {
+            transform: rotate3d(1, 1, 1, 360deg);
+    }
+    100% {
+         transform: rotate3d(1, 1, 1, 0deg);
+}
 }
 .hell {
     display: block;
