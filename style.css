@@ -8,12 +8,13 @@ body {
 
 }
 * {
-    animation: pain 1s infinite alternate;
+    
     background-color: blue;
     border: 3px solid rgb(255, 0, 255);
 }
 *:hover {
-    animation: spin 10s ease-in-out 0s infinite forwards;
+    
+    animation: spin 10s ease-in-out infinite forwards, pain 1s infinite linear forwards;
 }
 a {
     font-size: 300%;
@@ -21,6 +22,7 @@ a {
     color: yellow;
 }
 a:hover {
+    animation: spin 10s ease-in-out 0s infinite forwards;
     border: 2px solid orange;
     color:blueviolet;
 }
@@ -48,6 +50,7 @@ p {
   display: initial;
 }
 .overlay:hover {
+    animation: spin 10s ease-in-out 0s infinite forwards;
     transition: opacity 0.5s ease-in-out;
     opacity: 0.0;
 
@@ -73,6 +76,10 @@ p {
         filter:invert(0%);
         
     }
+    100% {
+        filter:invert(100%);
+        
+    }
 }
 @keyframes spin {
     0% {
@@ -96,4 +103,7 @@ p {
     padding: 20px 20px;
         background-color: greenyellow;
     color: black;
+}
+.hell:hover {
+    animation: spin 10s ease-in-out 0s infinite forwards;
 }
